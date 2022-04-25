@@ -65,5 +65,21 @@ function show(el,index){
    })
 }
 
+let userdetail = JSON.parse(document.getElementById("user-details")) || []
+function userdetail(el,index){
+    let div = document.createElement("div")
 
+    let user_name = document.createElement("h3")
+    user_name.innerText=el.user_name;
+
+    let seat = document.createElement("h3")
+    seat.innerText=el.seat
+
+    div.append(user_name,seat)
+
+    localStorage.setItem("userdetail",JSON.stringify(div))
+
+
+
+}
 </script>
